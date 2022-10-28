@@ -27,11 +27,15 @@ and a tower of 6 floors looks like this:
 */
 
 function towerBuilder(num) {
-    array = [];
-
-
+    let tower = [];
+    for (let i = 0; i < num; i++) {
+        let len = num * 2 - 1;
+        let ast = i * 2 + 1;
+        tower.push(" ".repeat((len - ast)/2) + "*".repeat(ast) + " ".repeat((len - ast)/2));
+    }
+    return tower;
 }
 
 
-console.log(tower(1));
-console.log(tower(6));
+console.log(towerBuilder(3));
+console.log(towerBuilder(6));
